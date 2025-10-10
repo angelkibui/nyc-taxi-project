@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NYC Taxi Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>NYC Taxi Trip Analytics Dashboard</h1>
+            <p>Explore patterns and insights from New York City taxi data</p>
+        </header>
+
+        <!-- Filters Section -->
+        <section class="filters">
+            <h2>Filter Data</h2>
+            <div class="filter-group">
+                <div class="filter-item">
+                    <label for="date-range">Date Range:</label>
+                    <input type="date" id="start-date">
+                    <input type="date" id="end-date">
+                </div>
+                <div class="filter-item">
+                    <label for="trip-distance">Trip Distance (miles):</label>
+                    <input type="range" id="trip-distance" min="0" max="50" value="50">
+                    <span id="distance-value">50</span>
+                </div>
+                <div class="filter-item">
+                    <label for="payment-type">Payment Type:</label>
+                    <select id="payment-type">
+                        <option value="all">All</option>
+                        <option value="credit">Credit Card</option>
+                        <option value="cash">Cash</option>
+                    </select>
+                </div>
+                <button id="apply-filters">Apply Filters</button>
+                <button id="reset-filters">Reset</button>
+            </div>
+        </section>
+
+        <!-- Key Metrics Section -->
+        <section class="metrics">
+            <div class="metric-card">
+                <h3>Total Trips</h3>
+                <p id="total-trips">0</p>
+            </div>
+            <div class="metric-card">
+                <h3>Average Fare</h3>
+                <p id="avg-fare">$0.00</p>
+            </div>
+            <div class="metric-card">
+                <h3>Average Distance</h3>
+                <p id="avg-distance">0 miles</p>
+            </div>
+            <div class="metric-card">
+                <h3>Average Duration</h3>
+                <p id="avg-duration">0 min</p>
+            </div>
+        </section>
+
+        <!-- Visualizations Section -->
+        <section class="visualizations">
+            <div class="chart-container">
+                <h2>Trip Distribution by Hour</h2>
+                <canvas id="hourly-chart"></canvas>
+            </div>
+            <div class="chart-container">
+                <h2>Fare vs. Distance</h2>
+                <canvas id="fare-distance-chart"></canvas>
+            </div>
+            <div class="chart-container">
+                <h2>Payment Method Distribution</h2>
+                <canvas id="payment-chart"></canvas>
+            </div>
+            <div class="chart-container">
+                <h2>Average Speed by Hour</h2>
+                <canvas id="speed-chart"></canvas>
+            </div>
+        </section>
+
+        <!-- Data Table Section -->
+        <section class="data-table">
+            <h2>Trip Details</h2>
+            <div class="table-controls">
+                <input type="text" id="search-table" placeholder="Search trips...">
+                <select id="sort-by">
+                    <option value="pickup_time">Pickup Time</option>
+                    <option value="fare_amount">Fare Amount</option>
+                    <option value="trip_distance">Distance</option>
+                </select>
+            </div>
+            <div class="table-container">
+                <table id="trips-table">
+                    <thead>
+                        <tr>
+                            <th>Pickup Time</th>
+                            <th>Distance (miles)</th>
+                            <th>Duration (min)</th>
+                            <th>Fare Amount</th>
+                            <th>Payment Type</th>
+                        </tr>
+                    </thead>
+                    <tbody id="trips-table-body">
+                        <!-- Data will be inserted here by JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+            <div class="pagination">
+                <button id="prev-page">Previous</button>
+                <span id="page-info">Page 1 of 1</span>
+                <button id="next-page">Next</button>
+            </div>
+        </section>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
