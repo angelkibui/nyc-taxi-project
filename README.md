@@ -106,6 +106,7 @@ The algorithm calculates mean and standard deviation manually, identifies anomal
 ## Execution
 To run the backend locally:
 ```bash
+cd nyc-taxi-app
 cd backend
 python app.py
 This will:
