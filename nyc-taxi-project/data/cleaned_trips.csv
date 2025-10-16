@@ -1,0 +1,4 @@
+trip_id,pickup_datetime,dropoff_datetime,pickup_lat,pickup_lon,dropoff_lat,dropoff_lon,trip_duration_secs,trip_distance_km,fare_amount,tip_amount,passenger_count,payment_type
+1,2023-01-01 08:05:00,2023-01-01 08:25:00,40.761,-73.982,40.748,-73.985,1200,3.1,12.5,2.5,1,card
+2,2023-01-01 09:00:00,2023-01-01 09:10:00,40.775,-73.965,40.761,-73.982,600,2.5,10.0,1.0,2,cash
+3,2023-01-01 10:15:00,2023-01-01 10:45:00,40.748,-73.985,40.730,-73.997,1800,5.0,20.0,3.0,1,card

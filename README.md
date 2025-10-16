@@ -74,5 +74,54 @@ To keep the project runnable:
 
 Only the code and structure are included.
 
+# Database Design & Algorithmic Logic
+
+## Overview
+This backend demonstrates the **Database Design and Implementation** as well as the **Algorithmic Logic and Data Structures** component of our NYC Taxi Trip Analysis project.  
+It combines data storage, derived feature computation, and a custom anomaly detection algorithm into a single self-contained Python backend.
+
+---
+
+## Database Design
+The database was designed using **SQLite** for simplicity and portability.  
+It contains a single normalized table called `trips`, which includes:
+- Pickup and dropoff timestamps  
+- Trip distance  
+- Fare and tip amount  
+- A derived feature `fare_per_km` (computed as `fare_amount / trip_distance`)
+
+This design allows efficient querying while maintaining data integrity. Indexes can be easily added for performance optimization.
+
+---
+
+## Custom Algorithm (DSA)
+To satisfy the algorithmic requirement, a **manual Min-Heap** structure was implemented from scratch to support analytical operations such as:
+- Maintaining the smallest or largest values without using Python’s built-ins  
+- Detecting outlier trips using statistical thresholds (mean ± 3σ)  
+
+The algorithm calculates mean and standard deviation manually, identifies anomalous trips based on fare per kilometer, and prints the results clearly for analysis.
+
+---
+
+## Execution
+To run the backend locally:
+```bash
+cd backend
+python app.py
+This will:
+
+Create an SQLite database file (nyc_taxi.db)
+
+Insert sample data
+
+Detect and print fare-per-km outliers to the console
+
+Example Output
+Database and table created successfully.
+Sample data inserted successfully.
+Outlier Trips Detected (by fare_per_km):
+Trip ID: 3, Fare/km: 15.00
+Outlier detection complete.
+
 
 

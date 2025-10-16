@@ -1,2 +1,16 @@
 data/raw/*
 data/processed/*
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.env
+venv/
+.env.local
+*.sqlite3
+nyc_taxi.db
+.DS_Store
+
+# VSCode
+.vscode/
