@@ -2,7 +2,7 @@ import pandas as pd
 
 def clean_taxi_data():
     print("Loading raw taxi data...")
-    df = pd.read_parquet("data/raw/yellow_tripdata_2025-08.parquet")
+    df = pd.read_csv("data/raw/demo_small.csv")
     print("Loaded!", len(df), "rows")
 
     # Remove empty or invalid rows
