@@ -119,13 +119,19 @@ Detect and print fare-per-km outliers to the console
 
 Example Output
 Database and table created successfully.
-Links to video walkthroughs
-https://www.loom.com/share/86c504ee9c664ccd95dcca9e5b9222c4?sid=c3640cc1-4773-45b0-9adf-f185addffbaa
-
 Sample data inserted successfully.
 Outlier Trips Detected (by fare_per_km):
 Trip ID: 3, Fare/km: 15.00
 Outlier detection complete.
+
+###  System Documentation
+You can read the full documentation [here](https://docs.google.com/document/d/1Tu6DxZ2RCyZNLfC7Qs5hJEpurm891odFhqRp6gQteHo/edit?usp=sharing).
+
+---
+
+### Project Demo Videos
+Watch walkthrough presentation videos [here](https://www.loom.com/share/86c504ee9c664ccd95dcca9e5b9222c4?sid=c3640cc1-4773-45b0-9adf-f185addffbaa).
+
 
 
 
