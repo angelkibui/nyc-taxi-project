@@ -7,16 +7,13 @@ The **NYC Taxi Project** is part of an enterprise-level fullstack data engineeri
 
 ## 1. Backend Project Structure
 nyc-taxi-project/
-│
-├── src/ # Source code 
-  ├── raw/ # Raw dataset files (e.g., yellow_tripdata_2025-08.parquet)
-│ └── processed/ # Cleaned dataset output (cleaned_taxi_data.csv) 
-│
-├── requirements.txt
-├── README.md 
-└── .gitignore 
-
-
+- data;  ( yellow_tripdata_2025-08.parquet) # Raw dataset files
+  processed data (cleaned_taxi_data.csv) # Cleaned dataset output
+- src; clean_data.py # Main Python script for cleaning and processing
+-  (`venv`) ; # Virtual environment
+- requirements.txt # List of Python dependencies
+- README.md # Project documentation 
+- .gitignore # Files and folders ignored by Git
 ---
 
 ## 2. Setup Instructions
